@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chullo Peruano – Click y Arte</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/productos.css" />
+    <link rel="stylesheet" href="css/header&fooder.css" />
+  </head>
+  <body>
+    <header class="container-fluid border-bottom header header-fullwidth">
+  <!-- AVISO CONTACTO -->
+  <div class="aviso-contacto">
+    ¿Quieres contactarte con nosotros? Escríbenos por Whatsapp al +51 961 366 430.
+  </div>
+
+  <div class="contenido-header">
+    <!-- DESKTOP: Logo, Título y Botones -->
+    <div class="row align-items-center justify-content-between gx-0 d-none d-md-flex">
+      <!-- Logo -->
+      <div class="col-md-2 d-flex justify-content-start align-items-center">
+        <img src="img_header/logo.png" alt="Logo Click y Arte" class="header-logo" />
+      </div>
+
+      <!-- Título -->
+      <div class="col-md-4 d-flex justify-content-center">
+        <a href="#" class="header-title">Click y Arte</a>
+      </div>
+
+      <!-- Botones -->
+      <div class="col-md-3 d-flex justify-content-end align-items-center acciones pe-3">
+        <a href="#" class="btn btn-registrarse">Registrarse</a>
+        <a href="#" class="btn btn-iniciar">Iniciar sesión</a>
+      </div>
+    </div>
+
+    <!-- MOBILE: Logo centrado -->
+    <div class="row d-flex d-md-none justify-content-center pt-3 pb-2">
+      <div class="col-12 d-flex justify-content-center align-items-center">
+        <img src="img_header/logo.png" alt="Logo Click y Arte" class="header-logo logo-mobile" />
+      </div>
+    </div>
+
+    <!-- MOBILE: Lupa, Carrito y Menú hamburguesa -->
+    <div class="row d-flex d-md-none justify-content-between align-items-center px-3 pb-2">
+      <!-- Lupa + carrito -->
+      <div class="col-auto d-flex align-items-center gap-3">
+        <img
+          src="img_header/buscar.png"
+          alt="Buscar"
+          class="icono"
+          id="icono-buscar"
+          onclick="toggleBuscar()"
+        />
+        <a href="carrito.html" class="position-relative">
+          <img
+            src="img_header/carrito_compra.png"
+            alt="Carrito"
+            class="carrito-img"
+          />
+          <span id="contador-carrito" class="badge position-absolute">0</span>
+        </a>
+        <input
+          type="text"
+          id="input-busqueda"
+          class="input-busqueda"
+          placeholder="Buscar..."
+        />
+      </div>
+
+      <!-- Menú hamburguesa -->
+      <div class="col-auto">
+        <button class="boton-hamburguesa" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+
+    <!-- NAV DESKTOP -->
+    <div class="row mt-3 justify-content-center align-items-center gx-0 nav-contenido d-none d-md-flex">
+      <div class="col-auto">
+        <img src="img_header/buscar.png" alt="Buscar" class="icono" />
+      </div>
+      <div class="col-auto d-flex flex-wrap justify-content-center gap-3 nav-links">
+        <a href="#">Inicio</a>
+        <a href="#">Colecciones</a>
+        <a href="#">Artesanías</a>
+        <a href="#"><strong>Tendencia</strong></a>
+        <a href="#">Sobre Nosotros</a>
+        <a href="#">Contáctanos</a>
+      </div>
+      <div class="col-auto position-relative">
+        <a href="carrito.html" class="position-relative">
+          <img
+            src="img_header/carrito_compra.png"
+            alt="Carrito"
+            class="carrito-img"
+          />
+          <span id="contador-carrito" class="badge position-absolute">0</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- NAV MOBILE -->
+    <div class="nav-links-mobile" id="nav-mobile">
+      <a href="#">Inicio</a>
+      <a href="#">Colecciones</a>
+      <a href="#">Artesanías</a>
+      <a href="#">Tendencia</a>
+      <a href="#">Tienda</a>
+      <a href="#">Contáctanos</a>
+      <a href="#">Quiénes Somos</a>
+      <!-- Botones de sesión en mobile -->
+      <div class="mobile-buttons">
+        <a href="#" class="btn btn-registrarse w-100">Registrarse</a>
+        <a href="#" class="btn btn-iniciar w-100">Iniciar sesión</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main class="container my-5">
+      <h2
+        class="fw-bold mb-5 text-uppercase"
+        style="font-family: 'Zen Tokyo Zoo', cursive"
+      >
+        Tendencia
+      </h2>
+
+      <!-- Producto principal: Chullo -->
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <div class="main-image-wrapper">
+            <img
+              id="main-img"
+              src="img/chullo.png"
+              class="img-fluid producto-principal"
+              alt="Chullo Peruano"
+              loading="lazy"
+            />
+          </div>
+          <div class="d-flex justify-content-center gap-2 mt-3 miniaturas">
+            <img
+              src="img/poncho1.png"
+              class="miniatura-img"
+              onclick="cambiarImagen(this)"
+              alt="Mini Poncho"
+              loading="lazy"
+            />
+            <img
+              src="img/chullo.png"
+              class="miniatura-img"
+              onclick="cambiarImagen(this)"
+              alt="Mini Chullo"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h3 class="fw-bold">Chullo Peruano Artesanal – Tradición Andina</h3>
+          <h5 class="text-success fw-semibold">S/ 22.99</h5>
+          <p class="text-muted small">Impuesto incluido</p>
+          <p>
+            Tejido con técnicas ancestrales en los Andes peruanos, este chullo
+            combina abrigo, estilo y cultura en una sola prenda. Ideal para
+            climas fríos, conserva el calor y luce increíble.
+          </p>
+          <p class="small">
+            100% lana natural. Colores vibrantes. Diseño único.
+          </p>
+
+          <div class="d-flex align-items-center gap-3 my-4">
+            <button
+              class="btn btn-outline-secondary"
+              onclick="cambiarCantidad(-1)"
+            >
+              −
+            </button>
+            <input
+              type="text"
+              id="cantidad"
+              class="form-control text-center"
+              value="1"
+              readonly
+              style="max-width: 60px"
+            />
+            <button
+              class="btn btn-outline-secondary"
+              onclick="cambiarCantidad(1)"
+            >
+              +
+            </button>
+          </div>
+
+          <div class="d-grid gap-2">
+            <button class="btn btn-dark" onclick="agregarAlCarrito()">
+              Añadir al carrito
+            </button>
+            <button class="btn btn-outline-dark" id="btn-comprar-ahora">Comprar ahora</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carrusel de sugerencias -->
+      <section class="mt-5">
+        <h4 class="mb-3 fw-bold">Sugerencias</h4>
+        <div class="carrusel-wrapper">
+          <button class="carrusel-btn prev" onclick="moverCarrusel(-1)">
+            ‹
+          </button>
+          <div class="sugerencias-carousel" id="carruselProductos">
+            <div class="producto">
+              <a href="Productos.html">
+                <img src="img/poncho.png" alt="Chullo peruano" />
+                <p>Poncho Andino</p>
+                <small>Elegancia y cultura en cada hilo.</small>
+                <strong>S/ 99.90</strong>
+              </a>
+            </div>
+            <div class="producto">
+              <a href="producto_bolso.html">
+                <img src="img/bolso.png" alt="Bolsos Qepe" />
+                <p>Bolsos Qepe</p>
+                <small>Diseño artesanal ideal para el día a día.</small>
+                <strong>S/ 30.99</strong>
+              </a>
+            </div>
+            <div class="producto">
+              <a href="producto_faja.html">
+                <img src="img/faja.png" alt="Faja Andina" />
+                <p>Faja Andina</p>
+                <small>Cinturón tradicional de uso ceremonial.</small>
+                <strong>S/ 22.89</strong>
+              </a>
+            </div>
+            <div class="producto">
+              <a href="producto_manta.html">
+                <img src="img/manta_alpaca.png" alt="Manta de alpaca" />
+                <p>Manta de alpaca</p>
+                <small>Tela gruesa y cálida para hogar o picnic.</small>
+                <strong>S/ 40.00</strong>
+              </a>
+            </div>
+            <div class="producto">
+              <a href="producto_tapiz.html">
+                <img src="img/tapiz_lana.png" alt="Tapiz de lana" />
+                <p>Tapiz de lana</p>
+                <small>Arte mural con lana y colores vibrantes.</small>
+                <strong>S/ 53.99</strong>
+              </a>
+            </div>
+            <div class="producto">
+              <a href="producto_bufanda.html">
+                <img src="img/bufanda.png" alt="Bufanda andina" />
+                <p>Bufanda andina</p>
+                <small>Abrigo suave con colores típicos.</small>
+                <strong>S/ 25.99</strong>
+              </a>
+            </div>
+            <div class="producto">
+              <a href="producto_tapiz.html">
+                <img src="img/tapiz_lana.png" alt="Tapiz de lana" />
+                <p>Tapiz de lana</p>
+                <small>Arte mural con lana y colores vibrantes.</small>
+                <strong>S/ 53.99</strong>
+              </a>
+            </div>
+            <div class="producto">
+              <a href="producto_tapiz.html">
+                <img src="img/tapiz_lana.png" alt="Tapiz de lana" />
+                <p>Tapiz de lana</p>
+                <small>Arte mural con lana y colores vibrantes.</small>
+                <strong>S/ 53.99</strong>
+              </a>
+            </div>
+          </div>
+          <button class="carrusel-btn next" onclick="moverCarrusel(1)">
+            ›
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="contenedor-footer">
+        <!-- Lado izquierdo -->
+        <div class="lado-izquierdo-footer">
+          <a href="#" class="logo-link">
+            <h2>Click y Arte</h2>
+          </a>
+
+          <div class="imagenes-footer">
+            <img
+              src="img_header/tarjetas.png"
+              alt="Métodos de Pago"
+              class="img-footer"
+            />
+            <img
+              src="img_header/redes.png"
+              alt="Redes Sociales"
+              class="img-footer"
+            />
+          </div>
+        </div>
+
+        <!-- Lado derecho -->
+        <div class="lado-derecho-footer">
+          <div class="enlaces-superiores">
+            <a href="#">Libro de reclamaciones</a>
+            <a href="#">Colaboraciones</a>
+            <a href="#">Medios</a>
+          </div>
+          <div class="enlaces-inferiores">
+            <a href="#">Términos del servicio</a>
+            <a href="#">Política de reembolso</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/productos.js"></script>
+  </body>
+</html>
